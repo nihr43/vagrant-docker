@@ -1,6 +1,6 @@
 FROM alpine:3.8
 #
-## dockerfile built to behave like a classical server.  boots openrc, loads sshd, and listens for root
+## dockerfile built to behave like a regular server.  boots openrc, loads sshd, and listens for root
 
 # install ssh server
 RUN apk update && apk upgrade
