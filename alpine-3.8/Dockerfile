@@ -5,7 +5,7 @@ FROM alpine:3.8
 # install ssh server
 RUN apk update && apk upgrade
 
-RUN apk add openssh openrc && rm  -rf /tmp/* /var/cache/apk/*
+RUN apk add openssh openrc
 RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin without-password/' /etc/ssh/sshd_config
 RUN mkdir /root/.ssh
 RUN wget https://github.com/nihr43.keys -O /root/.ssh/authorized_keys
